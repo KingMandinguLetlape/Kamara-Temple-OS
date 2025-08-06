@@ -1,6 +1,6 @@
-export function Section({ children, className = "" }) {
+export default function Section({ children }) {
   return (
-    <section className={`py-8 px-4 sm:px-6 lg:px-8 ${className}`}>
+    <section className="my-6">
       {children}
     </section>
   );
