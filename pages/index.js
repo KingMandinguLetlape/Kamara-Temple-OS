@@ -10,3 +10,27 @@ import Scroll from "../components/ui/scroll";
 import Section from "../components/ui/section";
 import Spacer from "../components/ui/spacer";
 import Text from "../components/ui/text";
+
+export default function Home() {
+  return (
+    <Layout>
+      <Scroll>
+        <Container>
+          <Section>
+            <Reveal>
+              <Avatar />
+              <Text>Welcome to Kamara Temple OS</Text>
+              <Input placeholder="Enter divine code..." />
+              <Spacer />
+              <Button>Submit</Button>
+              <Divider />
+              <Card>
+                <Text>This is the card of fire, wrapped in divine shadow.</Text>
+              </Card>
+            </Reveal>
+          </Section>
+        </Container>
+      </Scroll>
+    </Layout>
+  );
+}
