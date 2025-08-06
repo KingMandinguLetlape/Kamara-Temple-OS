@@ -1,6 +1,6 @@
-export function Layout({ children }) {
+export default function Layout({ children }) {
   return (
-    <div className="min-h-screen bg-black text-white font-sans">
+    <div className="min-h-screen flex flex-col">
       {children}
     </div>
   );
