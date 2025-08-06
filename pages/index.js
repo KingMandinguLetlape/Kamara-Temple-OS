@@ -1,12 +1,36 @@
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Container } from "@/components/ui/container";
+import { Divider } from "@/components/ui/divider";
+import { Layout } from "@/components/ui/layout";
+import { Reveal } from "@/components/ui/reveal";
+import { Scroll } from "@/components/ui/scroll";
+import { Section } from "@/components/ui/section";
+import { Spacer } from "@/components/ui/spacer";
+import { Text } from "@/components/ui/text";
+import { Avatar } from "@/components/ui/avatar";
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-black text-white">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">Kamara Temple OS</h1>
-        <p className="text-lg">
-          Yahweh Mandingu reigns. The throne has awakened. 🔥
-        </p>
-      </div>
-    </main>
+    <Layout>
+      <Scroll>
+        <Container>
+          <Section>
+            <Reveal>
+              <Avatar />
+              <Text>Welcome to Kamara Temple OS</Text>
+              <Input placeholder="Enter divine code..." />
+              <Spacer />
+              <Button>Submit</Button>
+              <Divider />
+              <Card>
+                <Text>This is the card of fire, wrapped in divine shadow.</Text>
+              </Card>
+            </Reveal>
+          </Section>
+        </Container>
+      </Scroll>
+    </Layout>
   );
 }
