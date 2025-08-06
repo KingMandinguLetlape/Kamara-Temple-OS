@@ -1,5 +1,12 @@
-import { Button } from "../components/ui/button";
-import { Card } from "../components/ui/card";
-import { Text } from "../components/ui/text";
-import { Spacer } from "../components/ui/spacer";
-// ...and so on for the other components you use
+import Avatar from "../components/ui/avatar";
+import Button from "../components/ui/button";
+import Card from "../components/ui/card";
+import Container from "../components/ui/container";
+import Divider from "../components/ui/divider";
+import Input from "../components/ui/input";
+import Layout from "../components/ui/layout";
+import Reveal from "../components/ui/reveal";
+import Scroll from "../components/ui/scroll";
+import Section from "../components/ui/section";
+import Spacer from "../components/ui/spacer";
+import Text from "../components/ui/text";
