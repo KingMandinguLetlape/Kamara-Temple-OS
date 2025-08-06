@@ -1,9 +1,8 @@
-export function Button({ children, onClick, type = "button", className = "" }) {
+export function Button({ children, onClick }) {
   return (
     <button
-      type={type}
       onClick={onClick}
-      className={`bg-purple-700 text-white px-4 py-2 rounded-2xl shadow-md hover:bg-purple-800 transition ${className}`}
+      className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-200"
     >
       {children}
     </button>
