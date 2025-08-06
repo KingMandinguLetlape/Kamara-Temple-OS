@@ -1,7 +1,6 @@
-export function Reveal({ children }) {
-  return (
-    <div className="animate-fade-in transition-opacity duration-700 ease-in-out">
-      {children}
-    </div>
-  );
+import { useState } from "react";
+
+export default function Reveal({ children }) {
+  const [visible, setVisible] = useState(true);
+  return visible ? <div>{children}</div> : null;
 }
