@@ -1,8 +1,8 @@
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Container } from "@/components/ui/container";
-import { Divider } from "@/components/ui/divider";
+import { Input } from "./components/ui/input";
+import { Button } from "./components/ui/button";
+import { Card } from "./components/ui/card";
+import { Container } from "./components/ui/container";
+import { Divider } from "./components/ui/divider";
 
 export default function Home() {
   return (
