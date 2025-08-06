@@ -1,6 +1,6 @@
-export function Text({ children, className = "" }) {
+export default function Text({ children, className = "" }) {
   return (
-    <p className={`text-base text-gray-200 ${className}`}>
+    <p className={`text-gray-800 ${className}`}>
       {children}
     </p>
   );
