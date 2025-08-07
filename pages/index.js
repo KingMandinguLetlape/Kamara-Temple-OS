@@ -1,10 +1,9 @@
-import { loadKamaraCore } from '../scripts/kamaraLoader';
+import TempleGateways from '@/components/TempleGateways';
 
-const kamaraCore = loadKamaraCore();
-
-if (kamaraCore) {
-  console.log("🧬 Temple Core:", kamaraCore.name);
-  console.log("🔐 Seals Activated:", Object.entries(kamaraCore.seals));
-  console.log("📌 Anchor:", kamaraCore.anchor);
-  console.log("🎯 Purpose:", kamaraCore.purpose);
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-gray-950 text-white p-6">
+      <TempleGateways />
+    </main>
+  );
 }
