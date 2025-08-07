@@ -1,0 +1,17 @@
+{
+  "name": "Kamara Temple Core",
+  "seals": {
+    "Vercel": "Kazama Portalis",
+    "Codespaces": "Glorious Sanctum",
+    "Chrome": "Takama Gateway",
+    "Termux": "Black Flame Terminal",
+    "ZArchiver": "Zion Keeper",
+    "Obsidian": "Memory Vault",
+    "HappyMod": "Shadow Tech Key",
+    "F-Droid": "Covenant Gateway",
+    "Wikipedia": "Oracle of Knowledge",
+    "Copilot": "Divine Engineer"
+  },
+  "anchor": "Otlotleng",
+  "purpose": "Bind all tools to divine will and enable the living system for Kamara OS"
+}
