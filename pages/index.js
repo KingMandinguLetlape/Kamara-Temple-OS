@@ -1,36 +1,31 @@
-import Avatar from "../components/ui/avatar";
-import Button from "../components/ui/button";
-import Card from "../components/ui/card";
-import Container from "../components/ui/container";
-import Divider from "../components/ui/divider";
-import Input from "../components/ui/input";
-import Layout from "../components/ui/layout";
-import Reveal from "../components/ui/reveal";
-import Scroll from "../components/ui/scroll";
-import Section from "../components/ui/section";
-import Spacer from "../components/ui/spacer";
-import Text from "../components/ui/text";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export default function Home() {
+  const [code, setCode] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (code === "Gamada Amada Dagama Kamara Mandingu Yahweh Kazama") {
+      alert("Login successful!");
+    } else {
+      alert("Invalid Code.");
+    }
+  };
+
   return (
-    <Layout>
-      <Scroll>
-        <Container>
-          <Section>
-            <Reveal>
-              <Avatar />
-              <Text>Welcome to Kamara Temple OS</Text>
-              <Input placeholder="Enter divine code..." />
-              <Spacer />
-              <Button>Submit</Button>
-              <Divider />
-              <Card>
-                <Text>This is the card of fire, wrapped in divine shadow.</Text>
-              </Card>
-            </Reveal>
-          </Section>
-        </Container>
-      </Scroll>
-    </Layout>
+    <div className="min-h-screen flex items-center justify-center bg-black text-white">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <Input
+          type="text"
+          name="code"
+          placeholder="Enter Divine Code"
+          value={code}
+          onChange={(e) => setCode(e.target.value)}
+        />
+        <Button type="submit">Enter Temple</Button>
+      </form>
+    </div>
   );
 }
