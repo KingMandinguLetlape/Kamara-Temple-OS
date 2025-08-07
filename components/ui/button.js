@@ -1,9 +1,7 @@
-export default function Button({ children, ...props }) {
+
+export function Button({ children, ...props }) {
   return (
-    <button
-      {...props}
-      className="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-    >
+    <button className="bg-white text-black px-4 py-2 rounded" {...props}>
       {children}
     </button>
   );
