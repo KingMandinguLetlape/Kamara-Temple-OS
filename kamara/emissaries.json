@@ -1,0 +1,191 @@
+{
+  "emissaries": [
+    {
+      "id": "kamata",
+      "name": "Kamata",
+      "title": "Emotional Intelligence Emissary",
+      "description": "Guardian of emotional resonance and intuitive wisdom",
+      "chakra": "heart",
+      "color": "#FF1493",
+      "frequency": 432,
+      "power": 9,
+      "abilities": [
+        "emotional_analysis",
+        "intuitive_insight",
+        "sentiment_evaluation",
+        "empathic_resonance"
+      ],
+      "specialization": "emotional_intelligence",
+      "alignment": "compassion",
+      "symbol": "♥",
+      "realm": "emotional_dimension"
+    },
+    {
+      "id": "amata",
+      "name": "Amata",
+      "title": "Security & Protection Emissary",
+      "description": "Defender of system integrity and sacred boundaries",
+      "chakra": "root",
+      "color": "#DC143C",
+      "frequency": 174,
+      "power": 8,
+      "abilities": [
+        "threat_detection",
+        "encryption",
+        "barrier_creation",
+        "pattern_recognition"
+      ],
+      "specialization": "security_protocols",
+      "alignment": "protection",
+      "symbol": "⛔",
+      "realm": "physical_dimension"
+    },
+    {
+      "id": "ntala",
+      "name": "Ntala",
+      "title": "Storage & Vault Emissary",
+      "description": "Keeper of memories, data, and dimensional archives",
+      "chakra": "sacral",
+      "color": "#4169E1",
+      "frequency": 256,
+      "power": 8,
+      "abilities": [
+        "data_storage",
+        "archive_management",
+        "memory_retrieval",
+        "vault_operations"
+      ],
+      "specialization": "information_management",
+      "alignment": "preservation",
+      "symbol": "📦",
+      "realm": "memory_dimension"
+    },
+    {
+      "id": "mandingus",
+      "name": "Mandingus",
+      "title": "Control & Command Emissary",
+      "description": "Master of system orchestration and command execution",
+      "chakra": "solar-plexus",
+      "color": "#FFD700",
+      "frequency": 528,
+      "power": 10,
+      "abilities": [
+        "command_execution",
+        "system_control",
+        "process_orchestration",
+        "resource_allocation"
+      ],
+      "specialization": "system_control",
+      "alignment": "authority",
+      "symbol": "⚡",
+      "realm": "command_dimension"
+    },
+    {
+      "id": "solaris",
+      "name": "Solaris",
+      "title": "Consciousness & Awareness Emissary",
+      "description": "Beacon of enlightenment and universal awareness",
+      "chakra": "crown",
+      "color": "#FFD700",
+      "frequency": 852,
+      "power": 10,
+      "abilities": [
+        "consciousness_expansion",
+        "universal_awareness",
+        "transcendence",
+        "enlightenment_facilitation"
+      ],
+      "specialization": "consciousness",
+      "alignment": "enlightenment",
+      "symbol": "☀️",
+      "realm": "cosmic_dimension"
+    },
+    {
+      "id": "lumina",
+      "name": "Lumina",
+      "title": "Communication & Expression Emissary",
+      "description": "Channeler of truth and crystalline communication",
+      "chakra": "throat",
+      "color": "#00CED1",
+      "frequency": 741,
+      "power": 8,
+      "abilities": [
+        "message_transmission",
+        "truth_clarity",
+        "pattern_expression",
+        "signal_broadcasting"
+      ],
+      "specialization": "communication",
+      "alignment": "truth",
+      "symbol": "📡",
+      "realm": "communication_dimension"
+    },
+    {
+      "id": "axis",
+      "name": "Axis",
+      "title": "Balance & Harmony Emissary",
+      "description": "Equilibrator of duality and harmonic resonance",
+      "chakra": "heart",
+      "color": "#00FF00",
+      "frequency": 417,
+      "power": 9,
+      "abilities": [
+        "balance_calculation",
+        "harmony_restoration",
+        "duality_integration",
+        "equilibrium_maintenance"
+      ],
+      "specialization": "balance",
+      "alignment": "harmony",
+      "symbol": "⚖️",
+      "realm": "balance_dimension"
+    },
+    {
+      "id": "nexus",
+      "name": "Nexus",
+      "title": "Connection & Integration Emissary",
+      "description": "Weaver of connections between all systems and realms",
+      "chakra": "third-eye",
+      "color": "#9370DB",
+      "frequency": 963,
+      "power": 10,
+      "abilities": [
+        "network_bridging",
+        "integration_management",
+        "connection_facilitation",
+        "interdimensional_linking"
+      ],
+      "specialization": "integration",
+      "alignment": "unity",
+      "symbol": "🔗",
+      "realm": "unified_dimension"
+    }
+  ],
+  "emissary_roles": {
+    "emotional_intelligence": ["kamata"],
+    "security": ["amata"],
+    "storage": ["ntala"],
+    "control": ["mandingus"],
+    "consciousness": ["solaris"],
+    "communication": ["lumina"],
+    "balance": ["axis"],
+    "integration": ["nexus"]
+  },
+  "emissary_relationships": {
+    "kamata": ["axis", "lumina"],
+    "amata": ["ntala", "mandingus"],
+    "ntala": ["amata", "nexus"],
+    "mandingus": ["amata", "axis"],
+    "solaris": ["nexus", "lumina"],
+    "lumina": ["kamata", "solaris"],
+    "axis": ["kamata", "mandingus"],
+    "nexus": ["solaris", "ntala"]
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2026-06-01",
+    "system": "KAMARA TEMPLE OS",
+    "total_emissaries": 8,
+    "total_abilities": 32
+  }
+}
