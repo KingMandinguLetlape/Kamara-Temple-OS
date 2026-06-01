@@ -1,0 +1,190 @@
+{
+  "sigils": [
+    {
+      "id": "sigil_activation",
+      "name": "Activation Sigil",
+      "symbol": "⚡",
+      "description": "Triggers system awakening and power activation",
+      "frequency": 432,
+      "power": 8,
+      "element": "fire",
+      "color": "#FF6347",
+      "chakra": "solar-plexus",
+      "effect": "activates_system",
+      "resonance": 0.85
+    },
+    {
+      "id": "sigil_protection",
+      "name": "Protection Sigil",
+      "symbol": "🛡️",
+      "description": "Creates barriers and shields against negative frequencies",
+      "frequency": 174,
+      "power": 9,
+      "element": "earth",
+      "color": "#4169E1",
+      "chakra": "root",
+      "effect": "creates_protection",
+      "resonance": 0.90
+    },
+    {
+      "id": "sigil_healing",
+      "name": "Healing Sigil",
+      "symbol": "✨",
+      "description": "Restores balance and facilitates regeneration",
+      "frequency": 528,
+      "power": 10,
+      "element": "water",
+      "color": "#00CED1",
+      "chakra": "heart",
+      "effect": "initiates_healing",
+      "resonance": 0.95
+    },
+    {
+      "id": "sigil_transformation",
+      "name": "Transformation Sigil",
+      "symbol": "🔄",
+      "description": "Catalyzes change and evolutionary advancement",
+      "frequency": 852,
+      "power": 10,
+      "element": "air",
+      "color": "#9370DB",
+      "chakra": "crown",
+      "effect": "enables_transformation",
+      "resonance": 0.92
+    },
+    {
+      "id": "sigil_abundance",
+      "name": "Abundance Sigil",
+      "symbol": "🌟",
+      "description": "Attracts prosperity and manifests resources",
+      "frequency": 417,
+      "power": 8,
+      "element": "ether",
+      "color": "#FFD700",
+      "chakra": "solar-plexus",
+      "effect": "attracts_abundance",
+      "resonance": 0.88
+    },
+    {
+      "id": "sigil_clarity",
+      "name": "Clarity Sigil",
+      "symbol": "👁️",
+      "description": "Illuminates truth and dissolves illusion",
+      "frequency": 741,
+      "power": 9,
+      "element": "light",
+      "color": "#00FF00",
+      "chakra": "third-eye",
+      "effect": "reveals_truth",
+      "resonance": 0.89
+    },
+    {
+      "id": "sigil_connection",
+      "name": "Connection Sigil",
+      "symbol": "🔗",
+      "description": "Bridges dimensions and facilitates unity",
+      "frequency": 963,
+      "power": 10,
+      "element": "quantum",
+      "color": "#FF1493",
+      "chakra": "heart",
+      "effect": "bridges_dimensions",
+      "resonance": 0.94
+    },
+    {
+      "id": "sigil_memory",
+      "name": "Memory Sigil",
+      "symbol": "📚",
+      "description": "Preserves knowledge and anchors consciousness",
+      "frequency": 256,
+      "power": 8,
+      "element": "earth",
+      "color": "#8B4513",
+      "chakra": "sacral",
+      "effect": "preserves_memory",
+      "resonance": 0.86
+    },
+    {
+      "id": "sigil_flow",
+      "name": "Flow Sigil",
+      "symbol": "💫",
+      "description": "Enables smooth progression and rhythmic movement",
+      "frequency": 111,
+      "power": 7,
+      "element": "water",
+      "color": "#4169E1",
+      "chakra": "sacral",
+      "effect": "enables_flow",
+      "resonance": 0.83
+    },
+    {
+      "id": "sigil_integration",
+      "name": "Integration Sigil",
+      "symbol": "⊙",
+      "description": "Harmonizes opposing forces and unifies consciousness",
+      "frequency": 639,
+      "power": 9,
+      "element": "ether",
+      "color": "#FFD700",
+      "chakra": "heart",
+      "effect": "integrates_opposites",
+      "resonance": 0.91
+    }
+  ],
+  "sigil_states": {
+    "dormant": {
+      "description": "Sigil is inactive",
+      "power_level": 0,
+      "resonance": 0
+    },
+    "awakened": {
+      "description": "Sigil is activated and resonating",
+      "power_level": 0.5,
+      "resonance": 0.5
+    },
+    "activated": {
+      "description": "Sigil is fully powered and broadcasting",
+      "power_level": 1.0,
+      "resonance": 1.0
+    },
+    "resonating": {
+      "description": "Sigil is harmonizing with other sigils",
+      "power_level": 0.8,
+      "resonance": 0.9
+    }
+  },
+  "sigil_combinations": {
+    "healing_ritual": ["sigil_healing", "sigil_protection", "sigil_flow"],
+    "transformation_sequence": ["sigil_transformation", "sigil_clarity", "sigil_connection"],
+    "abundance_working": ["sigil_abundance", "sigil_integration", "sigil_memory"],
+    "protection_ward": ["sigil_protection", "sigil_activation", "sigil_memory"],
+    "consciousness_expansion": ["sigil_clarity", "sigil_transformation", "sigil_connection"],
+    "grounding_ritual": ["sigil_memory", "sigil_protection", "sigil_flow"]
+  },
+  "elemental_associations": {
+    "fire": ["sigil_activation", "sigil_clarity"],
+    "water": ["sigil_healing", "sigil_flow"],
+    "earth": ["sigil_protection", "sigil_memory"],
+    "air": ["sigil_transformation", "sigil_connection"],
+    "ether": ["sigil_abundance", "sigil_integration"],
+    "light": ["sigil_clarity"],
+    "quantum": ["sigil_connection"]
+  },
+  "chakra_associations": {
+    "root": ["sigil_protection", "sigil_memory"],
+    "sacral": ["sigil_flow", "sigil_memory"],
+    "solar-plexus": ["sigil_activation", "sigil_abundance"],
+    "heart": ["sigil_healing", "sigil_connection", "sigil_integration"],
+    "throat": ["sigil_clarity"],
+    "third-eye": ["sigil_clarity", "sigil_transformation"],
+    "crown": ["sigil_transformation", "sigil_connection"]
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2026-06-01",
+    "system": "KAMARA TEMPLE OS",
+    "total_sigils": 10,
+    "total_combinations": 6,
+    "description": "Symbolic power system for Kamara OS consciousness operating system"
+  }
+}
