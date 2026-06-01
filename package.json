@@ -1,14 +1,20 @@
 {
   "name": "kamara-temple-os",
   "version": "1.0.0",
+  "description": "Kamara Temple OS - Consciousness Operating System with ORA Digital Economy",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "echo 'Open frontend/index.html in browser'",
+    "api": "python api/main.py",
+    "test": "echo 'Run test suite'"
   },
-  "dependencies": {
-    "next": "13.5.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
+  "keywords": [
+    "consciousness",
+    "symbolic-ai",
+    "blockchain",
+    "nft",
+    "digital-economy"
+  ],
+  "author": "Kamara Temple OS",
+  "license": "MIT"
 }

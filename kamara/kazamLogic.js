@@ -1,216 +1,47 @@
 /**
- * KAZAM LOGIC
- * Command registry and execution system for Kamara OS
- * Manages symbolic commands, operations, and control flow
+ * KAZAM LOGIC - Command Registry & Execution System
+ * Symbolic command processing
  */
 
 class KazamLogic {
   constructor() {
     this.commands = new Map();
-    this.operations = new Map();
-    this.history = [];
-    this.registerDefaultCommands();
+    this.spells = new Map();
+    this.registerDefaultSpells();
   }
 
   /**
-   * Register a command in the system
-   * @param {string} name - Command name
-   * @param {function} fn - Command function
-   * @param {object} metadata - Command metadata
+   * Register a spell (symbolic function)
    */
-  registerCommand(name, fn, metadata = {}) {
-    this.commands.set(name, {
-      name,
-      fn,
-      metadata,
-      registered: Date.now()
-    });
-    return { registered: true, command: name };
+  registerSpell(name, fn, metadata = {}) {
+    this.spells.set(name, { fn, metadata, registered: Date.now() });
+    return true;
   }
 
   /**
-   * Register an operation (core symbolic operation)
-   * @param {string} name - Operation name
-   * @param {function} fn - Operation function
+   * Execute spell
    */
-  registerOperation(name, fn) {
-    this.operations.set(name, fn);
-    return { registered: true, operation: name };
+  castSpell(spellName, ...args) {
+    const spell = this.spells.get(spellName);
+    if (!spell) throw new Error(`Spell not found: ${spellName}`);
+    return spell.fn(...args);
   }
 
   /**
-   * Execute a command
-   * @param {string} name - Command name
-   * @param {...args} args - Command arguments
+   * List all spells
    */
-  async execute(name, ...args) {
-    const cmd = this.commands.get(name);
-    if (!cmd) {
-      return {
-        success: false,
-        error: `Command not found: ${name}`,
-        timestamp: Date.now()
-      };
-    }
-
-    try {
-      const result = await cmd.fn(...args);
-      const execution = {
-        command: name,
-        args,
-        result,
-        timestamp: Date.now(),
-        success: true
-      };
-      this.history.push(execution);
-      return execution;
-    } catch (error) {
-      const execution = {
-        command: name,
-        args,
-        error: error.message,
-        timestamp: Date.now(),
-        success: false
-      };
-      this.history.push(execution);
-      return execution;
-    }
+  listSpells() {
+    return Array.from(this.spells.keys());
   }
 
   /**
-   * Execute an operation
-   * @param {string} name - Operation name
-   * @param {...args} args - Operation arguments
+   * Register default spells
    */
-  async executeOp(name, ...args) {
-    const op = this.operations.get(name);
-    if (!op) {
-      return { success: false, error: `Operation not found: ${name}` };
-    }
-
-    try {
-      const result = await op(...args);
-      return { success: true, result, timestamp: Date.now() };
-    } catch (error) {
-      return { success: false, error: error.message, timestamp: Date.now() };
-    }
-  }
-
-  /**
-   * List all registered commands
-   * @returns {array}
-   */
-  listCommands() {
-    return Array.from(this.commands.entries()).map(([name, cmd]) => ({
-      name,
-      metadata: cmd.metadata,
-      registered: cmd.registered
-    }));
-  }
-
-  /**
-   * List all registered operations
-   * @returns {array}
-   */
-  listOperations() {
-    return Array.from(this.operations.keys());
-  }
-
-  /**
-   * Get command details
-   * @param {string} name - Command name
-   * @returns {object}
-   */
-  getCommand(name) {
-    const cmd = this.commands.get(name);
-    if (!cmd) return null;
-    return {
-      name: cmd.name,
-      metadata: cmd.metadata,
-      registered: cmd.registered
-    };
-  }
-
-  /**
-   * Get execution history
-   * @param {number} limit - Max entries
-   * @returns {array}
-   */
-  getHistory(limit = 50) {
-    return this.history.slice(-limit);
-  }
-
-  /**
-   * Clear execution history
-   */
-  clearHistory() {
-    this.history = [];
-  }
-
-  /**
-   * Register default system commands
-   */
-  registerDefaultCommands() {
-    // Mathematical operations
-    this.registerCommand('quickAdd', (a, b) => {
-      return a + b;
-    }, { type: 'math', description: 'Quick addition' });
-
-    this.registerCommand('quickMult', (a, b) => {
-      return a * b;
-    }, { type: 'math', description: 'Quick multiplication' });
-
-    this.registerCommand('quickDiv', (a, b) => {
-      if (b === 0) throw new Error('Division by zero');
-      return a / b;
-    }, { type: 'math', description: 'Quick division' });
-
-    // System operations
-    this.registerCommand('status', () => {
-      return { status: 'ONLINE', mode: 'ACTIVE', timestamp: Date.now() };
-    }, { type: 'system', description: 'Get system status' });
-
-    this.registerCommand('info', () => {
-      return {
-        system: 'KAMARA TEMPLE OS',
-        version: '1.0.0',
-        layer: 'consciousness',
-        commands: this.commands.size,
-        operations: this.operations.size
-      };
-    }, { type: 'system', description: 'Get system info' });
-
-    // Symbolic operations
-    this.registerCommand('invoke', (emissaryName) => {
-      return { invoked: emissaryName, timestamp: Date.now() };
-    }, { type: 'symbolic', description: 'Invoke an emissary' });
-
-    this.registerCommand('resonance', (frequency) => {
-      return {
-        frequency,
-        resonating: true,
-        harmonic: frequency * 2,
-        timestamp: Date.now()
-      };
-    }, { type: 'frequency', description: 'Activate frequency resonance' });
-  }
-
-  /**
-   * Get system statistics
-   * @returns {object}
-   */
-  stats() {
-    return {
-      totalCommands: this.commands.size,
-      totalOperations: this.operations.size,
-      totalExecutions: this.history.length,
-      successfulExecutions: this.history.filter(h => h.success).length,
-      failedExecutions: this.history.filter(h => !h.success).length
-    };
+  registerDefaultSpells() {
+    this.registerSpell('summon', (name) => `${name} awakens`, { sacred: true });
+    this.registerSpell('divination', (question) => `Answer to: ${question}`, { sacred: true });
+    this.registerSpell('transmute', (a, b) => a + b, { alchemical: true });
   }
 }
 
-// Export for use in both browser and Node.js
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = KazamLogic;
-}
+export { KazamLogic };
