@@ -1,20 +1,26 @@
 {
   "name": "kamara-temple-os",
   "version": "1.0.0",
-  "description": "Kamara Temple OS - Consciousness Operating System with ORA Digital Economy",
-  "type": "module",
+  "description": "ORA Universe - Full Stack Web3 Payment System",
+  "main": "api/server.js",
   "scripts": {
-    "dev": "echo 'Open frontend/index.html in browser'",
-    "api": "python api/main.py",
-    "test": "echo 'Run test suite'"
+    "start": "node api/server.js",
+    "dev": "nodemon api/server.js",
+    "deploy:amoy": "hardhat run scripts/deploy.js --network amoy",
+    "deploy:polygon": "hardhat run scripts/deploy.js --network polygon",
+    "compile": "hardhat compile",
+    "test": "hardhat test"
   },
-  "keywords": [
-    "consciousness",
-    "symbolic-ai",
-    "blockchain",
-    "nft",
-    "digital-economy"
-  ],
-  "author": "Kamara Temple OS",
-  "license": "MIT"
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "ethers": "^6.10.0",
+    "dotenv": "^16.3.1",
+    "@openzeppelin/contracts": "^5.0.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.20.0",
+    "nodemon": "^3.0.2"
+  }
 }
